@@ -1,4 +1,5 @@
-﻿using EchoBot1.Services;
+﻿using EchoBot1.Helpers;
+using EchoBot1.Services;
 using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime.Models;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
@@ -49,7 +50,7 @@ namespace EchoBot1.Dialogs
 
             foreach (var entity in entities)
             {
-                if (Conmmon.BugTypes.Any(s => s.Equals(entity.Entity, StringComparison.OrdinalIgnoreCase)))
+                if (Common.BugTypes.Any(s => s.Equals(entity.Entity, StringComparison.OrdinalIgnoreCase)))
                 {
                     await stepContext.Context.SendActivityAsync(MessageFactory.Text(String.Format("Yes! {0} is a Bug Type!", entity.Entity)), cancellationToken);
                 }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "067d404174dbe4c686e80cecd91fd9e091172a85"
+    "signature": "c34a46172bccf542604a40eeb283515041d1c371"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "EchoBot1/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
+          "Microsoft.Bot.Builder.AI.Luis": "4.5.2",
           "Microsoft.Bot.Builder.Azure": "4.5.2",
           "Microsoft.Bot.Builder.Dialogs": "4.5.2",
           "Microsoft.Bot.Builder.Integration.AspNet.Core": "4.5.1",
@@ -35,6 +36,23 @@
         },
         "compile": {
           "EchoBot1.dll": {}
+        }
+      },
+      "Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime/2.1.0": {
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.20",
+          "Microsoft.Rest.ClientRuntime.Azure": "3.3.19",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Net.Http": "4.3.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Language.LUIS.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Language.LUIS.dll": {}
         }
       },
       "Microsoft.Azure.DocumentDB.Core/2.1.2": {
@@ -134,6 +152,24 @@
           "lib/netstandard2.0/Microsoft.Bot.Builder.dll": {}
         }
       },
+      "Microsoft.Bot.Builder.AI.Luis/4.5.2": {
+        "dependencies": {
+          "Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime": "2.1.0",
+          "Microsoft.Bot.Builder": "4.5.2",
+          "Microsoft.Bot.Configuration": "4.5.2",
+          "Newtonsoft.Json": "11.0.2",
+          "SourceLink.Create.CommandLine": "2.8.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Bot.Builder.AI.Luis.dll": {
+            "assemblyVersion": "4.5.2.0",
+            "fileVersion": "4.5.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Bot.Builder.AI.Luis.dll": {}
+        }
+      },
       "Microsoft.Bot.Builder.Azure/4.5.2": {
         "dependencies": {
           "Microsoft.Azure.DocumentDB.Core": "2.1.2",
@@ -174,7 +210,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
           "Microsoft.Bot.Builder": "4.5.2",
-          "Microsoft.Bot.Configuration": "4.5.1",
+          "Microsoft.Bot.Configuration": "4.5.2",
           "Microsoft.Net.Http.Headers": "2.1.1",
           "Newtonsoft.Json": "11.0.2",
           "SourceLink.Create.CommandLine": "2.8.3"
@@ -189,7 +225,7 @@
           "lib/netstandard2.0/Microsoft.Bot.Builder.Integration.AspNet.Core.dll": {}
         }
       },
-      "Microsoft.Bot.Configuration/4.5.1": {
+      "Microsoft.Bot.Configuration/4.5.2": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
           "SourceLink.Create.CommandLine": "2.8.3",
@@ -197,8 +233,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Bot.Configuration.dll": {
-            "assemblyVersion": "4.5.1.0",
-            "fileVersion": "4.5.1.0"
+            "assemblyVersion": "4.5.2.0",
+            "fileVersion": "4.5.2.0"
           }
         },
         "compile": {
@@ -609,6 +645,21 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll": {}
+        }
+      },
+      "Microsoft.Rest.ClientRuntime.Azure/3.3.19": {
+        "dependencies": {
+          "Microsoft.Rest.ClientRuntime": "2.3.20",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.3.18.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Rest.ClientRuntime.Azure.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.0.1": {
@@ -3860,6 +3911,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8r62mdTtgrn2storrAKjX4c+GzweMuwIxINM9nPWKmFSRLNQQU3Ak1cneqAOEiONY3zkqJtF9ik6uuVbxDH9Qw==",
+      "path": "microsoft.azure.cognitiveservices.language.luis.runtime/2.1.0",
+      "hashPath": "microsoft.azure.cognitiveservices.language.luis.runtime.2.1.0.nupkg.sha512"
+    },
     "Microsoft.Azure.DocumentDB.Core/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3895,6 +3953,13 @@
       "path": "microsoft.bot.builder/4.5.2",
       "hashPath": "microsoft.bot.builder.4.5.2.nupkg.sha512"
     },
+    "Microsoft.Bot.Builder.AI.Luis/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-odKCt0Zy8njQnFnObiH4fuVjx0wF1cW3h0vpnkUKHRDVeHpfwIAMJuImG45Shj0MaDTjFP7GBqhpClNL/mR04w==",
+      "path": "microsoft.bot.builder.ai.luis/4.5.2",
+      "hashPath": "microsoft.bot.builder.ai.luis.4.5.2.nupkg.sha512"
+    },
     "Microsoft.Bot.Builder.Azure/4.5.2": {
       "type": "package",
       "serviceable": true,
@@ -3916,12 +3981,12 @@
       "path": "microsoft.bot.builder.integration.aspnet.core/4.5.1",
       "hashPath": "microsoft.bot.builder.integration.aspnet.core.4.5.1.nupkg.sha512"
     },
-    "Microsoft.Bot.Configuration/4.5.1": {
+    "Microsoft.Bot.Configuration/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mwgc6R+uE7AP96I4VvmS/3wmBZaPliq6b9i405F4uZMdC7ldzkw8tQb09GIbCcLiz0qvU/KSuRxPaJ5lgmMOQg==",
-      "path": "microsoft.bot.configuration/4.5.1",
-      "hashPath": "microsoft.bot.configuration.4.5.1.nupkg.sha512"
+      "sha512": "sha512-3568G3VkS5B4VLgt6LIlXTr6p51HSAtoYkOsPhU/8b48/SCZMOVR792Ut22LCgxw0ZaaMIjObLI7MdTf6Mz2Rg==",
+      "path": "microsoft.bot.configuration/4.5.2",
+      "hashPath": "microsoft.bot.configuration.4.5.2.nupkg.sha512"
     },
     "Microsoft.Bot.Connector/4.5.2": {
       "type": "package",
@@ -4055,6 +4120,13 @@
       "sha512": "sha512-bw/H1nO4JdnhTagPHWIFQwtlQ6rb2jqw5RTrqPsPqzrjhJxc7P6MyNGdf4pgHQdzdpBSNOfZTEQifoUkxmzYXQ==",
       "path": "microsoft.rest.clientruntime/2.3.20",
       "hashPath": "microsoft.rest.clientruntime.2.3.20.nupkg.sha512"
+    },
+    "Microsoft.Rest.ClientRuntime.Azure/3.3.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+NVBWvRXNwaAPTZUxjUlQggsrf3X0GbiRoxYfgc3kG9E55ZxZxvZPT3nIfC4DNqzGSXUEvmLbckdXgBBzGdUaA==",
+      "path": "microsoft.rest.clientruntime.azure/3.3.19",
+      "hashPath": "microsoft.rest.clientruntime.azure.3.3.19.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.0.1": {
       "type": "package",

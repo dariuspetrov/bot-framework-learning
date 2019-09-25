@@ -35,6 +35,9 @@ namespace EchoBot1
             // Create the Bot Framework Adapter with error handling enabled.
             services.AddSingleton<IBotFrameworkHttpAdapter, AdapterWithErrorHandler>();
 
+            // Configure Services
+            services.AddSingleton<BotServices>();
+
             // Configure state
             ConfigureState(services);
 
