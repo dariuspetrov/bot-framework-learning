@@ -56,9 +56,9 @@ namespace EchoBot1.Dialogs
             {
                 case "Greeting":
                     return await stepContext.BeginDialogAsync($"{nameof(MainDialog)}.greeting", null, cancellationToken);
-                case "NewBugReportIntent":
+                case "BugReportIntent":
                     return await stepContext.BeginDialogAsync($"{nameof(MainDialog)}.bugReport", null, cancellationToken);
-                case "QueryBugTypeIntent":
+                case "QueryBugType":
                     return await stepContext.BeginDialogAsync($"{nameof(MainDialog)}.bugType", null, cancellationToken);
                 default:
                     await stepContext.Context.SendActivityAsync(MessageFactory.Text($"I'm sorry, I don't know what you mean"), cancellationToken);
