@@ -1,0 +1,18 @@
+{
+    "name": "ChBot1",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "9eed36e0-de10-11e9-80e7-9b9356aecafe",
+            "name": "developement"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\Users\\dapetro\\source\\repos\\EchoBot1\\EchoBot1\\ChBot1.bot"
+}
