@@ -54,7 +54,7 @@ namespace EchoBot1
             // Create the storage we'll be using for User and Conversation state. (Memory is great for testing purposes)
             //services.AddSingleton<IStorage, MemoryStorage>();
 
-            var storageAccount = "DefaultEndpointsProtocol=https;AccountName=tutorialbot;AccountKey=89kTzYT9SQACtLx4emPCMwv5UJqlYc7Df0RsSWGtiHTXLJzBJfW1Nl+KUmf+RirFFd57gYZbtWgmIUX7z4s3Sg==;EndpointSuffix=core.windows.net";
+            var storageAccount = "DefaultEndpointsProtocol=https;AccountName=tutorialbot;AccountKey=<storageacct-key>;EndpointSuffix=core.windows.net";
             var storageContainer = "tutorialbot";
 
             services.AddSingleton<IStorage>(new AzureBlobStorage(storageAccount, storageContainer));
